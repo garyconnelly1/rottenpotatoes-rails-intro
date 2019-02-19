@@ -14,7 +14,7 @@ class MoviesController < ApplicationController
     
     Movie.ratings = ['G','PG','PG-13','R']
     
-    @all_ratings = Movie.ratings
+    @all_ratings =['G','PG','PG-13','R']
   
     
     sort = params[:sort] ## Sort the movies based on the title.

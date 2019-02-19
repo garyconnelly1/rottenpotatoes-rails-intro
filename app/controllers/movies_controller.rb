@@ -16,7 +16,7 @@ class MoviesController < ApplicationController
   end
   
   ################################
-  def sort
+  def title
     title = params[:title]
     @movies = Movie.order(title + " ASC")
   end

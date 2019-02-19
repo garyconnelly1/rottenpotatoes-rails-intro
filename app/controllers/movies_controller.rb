@@ -12,7 +12,9 @@ class MoviesController < ApplicationController
 
   def index
     
-    @all_ratings = ['G','PG','PG-13','R']
+    Movie.ratings = ['G','PG','PG-13','R']
+    
+    @all_ratings = Movie.ratings
   
     
     sort = params[:sort] ## Sort the movies based on the title.

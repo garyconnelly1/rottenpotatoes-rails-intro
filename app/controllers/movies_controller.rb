@@ -21,7 +21,7 @@ class MoviesController < ApplicationController
     @sort = params[:sort] ## Sort the movies based on the title.
     if @sort == 'title'
       @movies = Movie.order("title ASC")
-    elsif @sort == 'release_date'
+    elsif @sort == 'release_date' ## Part 1 complete.
       @movies = Movie.order("release_date ASC")
     else
       @movies = Movie.all

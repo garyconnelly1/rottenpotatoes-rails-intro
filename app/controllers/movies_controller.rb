@@ -13,13 +13,16 @@ class MoviesController < ApplicationController
   def index
     @movies = Movie.all
     
+    @movies = Movie.order("title ASC")
+    
+    
   end
   
   ################################
-  def title
-    title = params[:title]
-    @movies = Movie.order("title ASC")
-  end
+ # def title
+ #   title = params[:title]
+  #  @movies = Movie.order("title ASC")
+  #end
   ################################
 
   def new

@@ -12,9 +12,7 @@ class MoviesController < ApplicationController
 
   def index
     
-    #Movie.ratings = ['G','PG','PG-13','R']
-    
-   # @all_ratings =['G','PG','PG-13','R']
+  
    @all_ratings = Movie.pluck(:rating).uniq
   
     
@@ -28,7 +26,7 @@ class MoviesController < ApplicationController
     end
     
     params[:ratings].nil? ? @t_param = @all_ratings : @t_param = params[:ratings].keys
-    @movies = Movie.where(rating: @t_param).order(@sort)
+    @movies = Movie.where(rating: @t_param).order(@sort) ## Part 2 Complete.
   end
   
  ###

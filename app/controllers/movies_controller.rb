@@ -28,7 +28,7 @@ class MoviesController < ApplicationController
     end
   end
   
- 
+ ###
 
   def new
     # default: render 'new' template

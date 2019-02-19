@@ -18,16 +18,10 @@ class MoviesController < ApplicationController
       @movies = Movie.order("title ASC")
     else
       @movies = Movie.all
-    
-    
+    end
   end
   
-  ################################
- #def title
- #   title = params[:title]
-  #  @movies = Movie.order("title ASC")
-  #end
-  ################################
+ 
 
   def new
     # default: render 'new' template

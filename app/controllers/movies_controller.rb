@@ -12,7 +12,7 @@ class MoviesController < ApplicationController
 
   def index
     
-    Movie.ratings = ['G','PG','PG-13','R']
+    #Movie.ratings = ['G','PG','PG-13','R']
     
     @all_ratings =['G','PG','PG-13','R']
   

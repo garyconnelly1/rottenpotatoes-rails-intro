@@ -14,7 +14,10 @@ class MoviesController < ApplicationController
    # @movies = Movie.all
     
     sort = params[:sort]
-    @movies = Movie.order(sort + " ASC")
+    if sort == 'title'
+      @movies = Movie.order("title ASC")
+    else
+      @movies = Movie.all
     
     
   end
